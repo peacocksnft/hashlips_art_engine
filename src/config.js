@@ -2,12 +2,12 @@ const basePath = process.cwd();
 const { MODE } = require(`${basePath}/constants/blend_mode.js`);
 const { NETWORK } = require(`${basePath}/constants/network.js`);
 
-const network = NETWORK.eth;
+const network = NETWORK.sol;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
-const baseUri = "ipfs://NewUriToReplace";
+const namePrefix = "Pretty Peacocks";
+const description = "5555 Eloquently Designed Peacock NFTs";
+const baseUri = "image.png";
 
 const solanaMetadata = {
   symbol: "YC",
@@ -24,15 +24,17 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 10,
     layersOrder: [
       { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Beak" },
+      { name: "Body" },
+      { name: "Eyelash" },
+      { name: "Eyes" },
+      { name: "Feather" },
+      { name: "Head" },
+      { name: "Outfit" },
+      { name: "Tail Color" },
     ],
   },
 ];
@@ -42,8 +44,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 1200,
+  height: 1200,
   smoothing: false,
 };
 
@@ -72,13 +74,53 @@ const pixelFormat = {
 };
 
 const background = {
-  generate: true,
+  generate: false,
   brightness: "80%",
   static: false,
   default: "#000000",
 };
 
-const extraMetadata = {};
+const extraMetadata = {
+  "name": "Pretty Peacocks",
+  "symbol": "",
+  "description": "5555 Eloquently Designed Peacock NFTs",
+  "seller_fee_basis_points": 0,
+  "image": "image.png",
+  "external_url": "https://www.prettypeacocks.com/",
+  "attributes": [
+    {
+      "trait_type": "attribute#1 ex: Background",
+      "value": "Simple"
+    },
+    {
+      "trait_type": "attribute#2 ex: Clothes",
+      "value": "Green"
+   },
+   {
+      "trait_type": "attribute#3 ex: Hair",
+      "value": "Long Hair"
+    }
+  ],
+  "collection": {
+     "name": "Collection Name",
+     "family": "Family Name" 
+  },
+  "properties": {
+    "files": [
+      {
+        "uri": "image.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "Solana address where you'll receive SOL",
+        "share": 100
+      }
+    ]
+  }
+};
 
 const rarityDelimiter = "#";
 
