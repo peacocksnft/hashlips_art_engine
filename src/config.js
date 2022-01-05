@@ -80,49 +80,9 @@ const background = {
   default: "#000000",
 };
 
-const extraMetadata = {
-  "name": "Pretty Peacocks",
-  "symbol": "",
-  "description": "5555 Eloquently Designed Peacock NFTs",
-  "seller_fee_basis_points": 0,
-  "image": "image.png",
-  "external_url": "https://www.prettypeacocks.com/",
-  "attributes": [
-    {
-      "trait_type": "attribute#1 ex: Background",
-      "value": "Simple"
-    },
-    {
-      "trait_type": "attribute#2 ex: Clothes",
-      "value": "Green"
-   },
-   {
-      "trait_type": "attribute#3 ex: Hair",
-      "value": "Long Hair"
-    }
-  ],
-  "collection": {
-     "name": "Collection Name",
-     "family": "Family Name" 
-  },
-  "properties": {
-    "files": [
-      {
-        "uri": "image.png",
-        "type": "image/png"
-      }
-    ],
-    "category": "image",
-    "creators": [
-      {
-        "address": "Solana address where you'll receive SOL",
-        "share": 100
-      }
-    ]
-  }
-};
+const extraMetadata = {};
 
-const rarityDelimiter = "#";
+const rarityDelimiter = "#" 
 
 const uniqueDnaTorrance = 10000;
 
