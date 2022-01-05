@@ -109,7 +109,7 @@ const layersSetup = (layersOrder) => {
 
 const saveImage = (_editionCount) => {
   fs.writeFileSync(
-    `${buildDir}/images/${_editionCount}.png`,
+    `${buildDir}/images/${_editionCount-1}.png`,
     canvas.toBuffer("image/png")
   );
 };
@@ -130,7 +130,7 @@ const addMetadata = (_dna, _edition) => {
   let tempMetadata = {
     name: `${namePrefix} #${_edition}`,
     description: description,
-    image: `${baseUri}/${_edition}.png`,
+    image: ``,
     dna: sha1(_dna),
     edition: _edition,
     date: dateTime,
@@ -308,7 +308,7 @@ const saveMetaDataSingleFile = (_editionCount) => {
       )
     : null;
   fs.writeFileSync(
-    `${buildDir}/json/${_editionCount}.json`,
+    `${buildDir}/json/${_editionCount-1}.json`,
     JSON.stringify(metadata, null, 2)
   );
 };
